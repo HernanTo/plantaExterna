@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Instalación</title>
+    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/dashboard.css">
+    <link rel="stylesheet" href="./css/dash_info.css">
+</head>
+<body>
+    <script>
+        var today = new Date();
+        var day = today.getDate();
+        var month = today.getMonth() + 1;
+        var year = today.getFullYear();
+    </script>
+    <div class="container-genre container-dashb" id="con-main">
+        <div class="con-info-audios">
+            <div class="con-img-au">
+                <img src="./assets/img/Group 5.svg" alt="parlante-audio-etb" class="img-audio" id="no-audio-f">
+            </div>
+            <div class="info-audios">
+                <p>Nota: Hacer touch sobre estos iconos para más información</p>
+            </div>
+        </div>
+        <div class="sidebar-m">
+            <div class="head-sidebar">
+  
+              <a class="item-side" href="#">
+                <img src="./assets/img/avatar.svg" alt="">
+                <p>Escuela Digital</p>
+              </a>
+              
+            </div>
+            <div class="body-side">
+  
+              <a href="#" class="item-side">
+                <img src="./assets/img/clipboard-list.svg" alt="">
+                <p>Mi ruta</p>
+              </a>
+  
+              <a href="#" class="item-side">
+                <img src="./assets/img/chart-gantt.svg" alt="">
+                <p>Gestionar</p>
+              </a>
+  
+              <a href="#" class="item-side">
+                <img src="./assets/img/map.svg" alt="">
+                <p>Mapas</p>
+              </a>
+  
+              <a href="#" class="item-side">
+                <img src="./assets/img/calendar-days.svg" alt="">
+                <p>Calendario</p>
+              </a>
+  
+              <a href="#" class="item-side">
+                <img src="./assets/img/recursos.svg" alt="">
+                <p>Recursos</p>
+              </a>
+  
+              <a href="#" class="item-side">
+                <img src="./assets/img/settings.svg" alt="">
+                <p>Configuración</p>
+              </a>
+  
+              <a href="#" class="item-side">
+                <img src="./assets/img/user-gear.svg" alt="">
+                <p>Preferencias</p>
+              </a>
+  
+              <a href="#" class="item-side">
+                <img src="./assets/img/cloud-snow.svg" alt="">
+                <p>Acerca de</p>
+              </a>
+  
+            </div>
+            <div class="foo-side">
+              
+              <a href="./login.html" class="item-side">
+                <img src="./assets/img/exit.svg" alt="">
+                <p>Cerrar sesión</p>
+              </a>
+            </div>
+          </div>
+        <div class="header">
+            <img src="./assets/img/menu.svg" alt="" class="menu-ham" id="btn-menu">
+            <div class="volver-header"><img src="./assets/img/angle-left.svg" alt="volver-left"></div>
+            <div class="text-header">ETBQA_Tecnico1
+                <span><script>document.write(`${month}/${day}/${year}`)</script></span>
+            </div>
+            <div class="text-header-ac">Activar ruta de trabajo</div>
+            <img src="./assets/img/search.svg" alt="search">
+            <img src="./assets/img/comment-alt.svg" alt="msg">
+        </div>
+        <div class="actions-h">
+            <a href="#" id="btn-activar">Agregar actividad</a>
+            <select name="" id="select-header" disabled>
+                <option value="">Opciones</option>
+            </select>
+        </div>
+        <div id="ir_plan_exter" class="contenido-dash">
+            <div class="cod">
+                <div class="filas">
+                    <h6>Work Order Type</h6>
+                    <p>Assurance</p>
+        
+                    <h6>Work Skill</h6>
+                    <p>Install FTTH Services (1/100), Reparaciones Planta externa Cobre(1/100), Reparaciones Planta Externa FTTH(1/100)</p>
+                    
+                    <div class="form-floating">
+                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                            <option value="">Planta Externa</option>
+                        </select>
+                        <label for="floatingSelect">Actuaction Type</label>
+                    </div>
+
+                    <input type="text" disabled placeholder="Tipo de Actuación 2">
+        
+                    <h6>Activity ID</h6>
+                    <p>8808678</p>
+        
+                    <h6>Activity Type</h6>
+                    <p>Regular</p>
+                    <input type="text" disabled placeholder="Request Type">
+                    <input type="text" disabled placeholder="Salesforce Service id">
+                    <input type="text" disabled placeholder="Flag suspendido pago">
+                    <input type="text" disabled placeholder="Configuro dispositivos">
+                </div>
+                <div class="filas">
+                    <h6>Customer's ID</h6>
+                    <p>999</p>
+                    <h6>Name</h6>
+                    <p>INCIDENTES ETB</p>
+                    <h6>Strategic Business Unit</h6>
+                    <p>Hogares</p>
+                    <input type="text" disabled placeholder="Migrated">
+                    <h6>Subtipo Segment</h6>
+                    <p>Hogares</p>
+                    <h6>Customer Segment</h6>
+                    <p>NO_MIGRADO</p>
+                    <h6>Customer Category</h6>
+                    <p>PLATA</p>
+                    <input type="text" disabled placeholder="Cellular Phone">
+                    <input type="text" disabled placeholder="Cellular Phone 2">
+                    <input type="text" disabled placeholder="Email">
+                </div>
+                <div class="filas">
+                    <h3>Ubicacion</h3>
+                    <h6>City</h6>
+                    <p>BOOTA D.C</p>
+                    <h6>State</h6>
+                    <p>BOGOTA</p>
+                    <h3>Red</h3>
+                    <h6>Zone/Central</h6>
+                    <p>PE_FTTH</p>
+                </div>
+                <div class="filas"> 
+                    <div class="form-floating">
+                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                            <option value="">PEFM</option>
+                        </select>
+                        <label for="floatingSelect">Time Slot</label>
+                    </div>
+                    <h6>Activity Status</h6>
+                    <p>pending</p>
+                    <h6>Start - End</h6>
+                    <p>00:00 - 02:00</p>
+                    <h6>Duration</h6>
+                    <p>2 hours</p>
+                    <h6>Producto</h6>
+                    <p>PAQUETE</p>
+                    <h6>Cause</h6>
+                    <p>SIN VOZ / SID DATOS / SIN TV</p>
+                    <h6>Symptopm</h6>
+                    <p>MASIVA RED FIBRA ACCESO</p>
+                    <h6>Description</h6>
+                    <p>Prueba TecnologiaAcceso: FTTH ElemRed_OLT_SHELF:BOBAZTC6UF01 ElemRed_TARJETA_OLT:BOBAZTC6UF01G02 ElemRed_TARJETA_OLT_Puerto: PON PORT1</p>
+                    <input type="text" disabled placeholder="Closure Notes">
+                </div>
+            </div>
+            <div class="con-btn-in">
+                <button style="background: var(--orange-etb); color: white;" id="ini_externa">Iniciar</button>
+                <button id="agregar-espacio" style="display: none;"></button>
+                <button id="con-prox-act" style="display: none;"></button>
+                <button id="can-ruta" style="display: none;"></button>
+                <button id="ac-ruta" style="display: none;"></button>
+                <button id="btn-ac-portal" style="display: none;"></button>
+                <button id="btn-iniciar-dia" style="display: none;"></button>
+                <button id="volver-btn" style="display: none;"></button>
+            </div>
+        </div>
+    <!-- Info orden -->
+    <!-- Audios -->
+        <!-- Audio activar ruta -->
+        <audio id="au-activarRuta-ru" controls class="audio" style="display: none;">
+            <source type="audio/wav" src="./assets/audio/ruta/actuvar Ruta.m4a">
+        </audio>
+        <!-- Audio activar ruta -->
+        <!-- Audio iniciar dia -->
+        <audio id="au-iniciar-dia" controls class="audio" style="display: none;">
+            <source type="audio/wav" src="./assets/audio/ruta/btnIniciarDia.m4a">
+        </audio>
+        <!-- Audio iniciar dia -->
+        <!-- Audio info dia -->
+        <audio id="au-info-dia" controls class="audio" style="display: none;">
+            <source type="audio/wav" src="./assets/audio/ruta/InfoIniciardia.m4a">
+        </audio>
+        <!-- Audio info dia -->
+        <!-- Audio detalle inicio de dia -->
+        <audio id="au-detalle-dia" controls class="audio" style="display: none;">
+            <source type="audio/wav" src="./assets/audio/ruta/detalleIniciarDia.m4a">
+        </audio>
+        <!-- Audio detalle inicio de dia -->
+        <!-- Audio proxima actividad -->        
+        <audio id="au-prox-act" controls class="audio" style="display: none;">
+            <source type="audio/wav" src="./assets/audio/Paso 6/Proxima actividad.m4a">
+        </audio>
+        <!-- Audio proxima actividad -->
+        <!-- Audio Volver  -->
+        <audio id="au-detalle-orden" controls class="audio" style="display: none;">
+            <source type="audio/wav" src="./assets/audio/ruta/Volver.m4a">
+        </audio>
+        <!-- Audio Volver  -->
+        <!-- Audio orden a realizar -->
+        <audio id="au-orden-rea" controls class="audio" style="display: none;">
+            <source type="audio/wav" src="./assets/audio/ruta/ordenArealizar.m4a">
+        </audio>
+        <!-- Audio orden a realizar -->
+        <!-- Audio detalle orden -->
+        <audio id="au-detalle-act" controls class="audio" style="display: none;">
+            <source type="audio/wav" src="./assets/audio/ruta/DetalleOrden.m4a">
+        </audio>
+        <!-- Audio detalle orden -->
+    <!-- Audios -->
+    <!-- Modal -->
+        <!-- modal loading -->
+        <div class="modal fade modal-loading" tabindex="-1" id="modal-loading" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">PROCESANDO TU PETICIÓN</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="con-spiner">
+                        <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                    </div>
+                    <div class="text-spiner"><p>Por favor no cierres la ventana</p></div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- modal loading -->
+        <input type="text" id="agregar-espacio" style="display: none;">
+        <input type="text" id="agregar-diapo" style="display: none;">
+        <input type="text" id="btn-guardar-boleta" style="display: none;">
+        <input type="text" id="btn-paso-8" style="display: none;">
+        <input type="text" id="btn-modal-ps4error" style="display: none;">
+    <!-- Modal -->
+    <script src="./bootstrap/jquery.js"></script>
+    <script src="./bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/dash.js"></script>
+</body>
+</html>

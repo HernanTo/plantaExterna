@@ -225,6 +225,9 @@ li span{
 .portal-comen select{
     width: 300px;
 } 
+.container-header-act .body-portal{
+    grid-column: 2/3;
+}
 
 
 @media (max-width: 800px){

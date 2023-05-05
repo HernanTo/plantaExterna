@@ -90,7 +90,7 @@ document.getElementById('btn-iniciar-dia').addEventListener('click', event=>{
 document.getElementById('volver-btn').addEventListener('click', event=>{
     document.getElementById('con-detalle-inicio').style.display = "none";
 })
-document.getElementById('btn-ac-aprovi').addEventListener('click', event=>{
+document.getElementById('ini_externa').addEventListener('click', event=>{
     $( document ).ready(function() {
         $('#modal-loading').modal('toggle')
     });
@@ -100,4 +100,10 @@ document.getElementById('btn-ac-aprovi').addEventListener('click', event=>{
             window.location.href = "./orden_P_Externa.html";
         });
       }, "4000");
+})
+document.getElementById('btn-ac-aprovi').addEventListener('click', ()=>{
+    $( document ).ready(function() {
+        $('#modal-loading').modal('toggle')
+    });
+    window.location.href = "./dash_info.html";
 })

@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/dashboard.css">
-    <link rel="shortcut icon" href="./assets/img/ETB.svg">
 </head>
 <body>
     <script>
@@ -17,7 +16,7 @@
         var month = today.getMonth() + 1;
         var year = today.getFullYear();
     </script>
-    <div class="container-genre container-dashb">
+    <div class="container-genre container-dashb" id="con-main">
         <div class="con-info-audios">
             <div class="con-img-au">
                 <img src="./assets/img/Group 5.svg" alt="parlante-audio-etb" class="img-audio" id="no-audio-f">
@@ -26,7 +25,68 @@
                 <p>Nota: Hacer touch sobre estos iconos para más información</p>
             </div>
         </div>
+        <div class="sidebar-m">
+            <div class="head-sidebar">
+  
+              <a class="item-side" href="#">
+                <img src="./assets/img/avatar.svg" alt="">
+                <p>Escuela Digital</p>
+              </a>
+              
+            </div>
+            <div class="body-side">
+  
+              <a href="#" class="item-side">
+                <img src="./assets/img/clipboard-list.svg" alt="">
+                <p>Mi ruta</p>
+              </a>
+  
+              <a href="#" class="item-side">
+                <img src="./assets/img/chart-gantt.svg" alt="">
+                <p>Gestionar</p>
+              </a>
+  
+              <a href="#" class="item-side">
+                <img src="./assets/img/map.svg" alt="">
+                <p>Mapas</p>
+              </a>
+  
+              <a href="#" class="item-side">
+                <img src="./assets/img/calendar-days.svg" alt="">
+                <p>Calendario</p>
+              </a>
+  
+              <a href="#" class="item-side">
+                <img src="./assets/img/recursos.svg" alt="">
+                <p>Recursos</p>
+              </a>
+  
+              <a href="#" class="item-side">
+                <img src="./assets/img/settings.svg" alt="">
+                <p>Configuración</p>
+              </a>
+  
+              <a href="#" class="item-side">
+                <img src="./assets/img/user-gear.svg" alt="">
+                <p>Preferencias</p>
+              </a>
+  
+              <a href="#" class="item-side">
+                <img src="./assets/img/cloud-snow.svg" alt="">
+                <p>Acerca de</p>
+              </a>
+  
+            </div>
+            <div class="foo-side">
+              
+              <a href="./login.html" class="item-side">
+                <img src="./assets/img/exit.svg" alt="">
+                <p>Cerrar sesión</p>
+              </a>
+            </div>
+          </div>
         <div class="header">
+            <img src="./assets/img/menu.svg" alt="" class="menu-ham" id="btn-menu">
             <div class="volver-header"><img src="./assets/img/angle-left.svg" alt="volver-left"></div>
             <div class="text-header">ETBQA_Tecnico1
                 <span><script>document.write(`${month}/${day}/${year}`)</script></span>
@@ -43,7 +103,7 @@
                 <option value="">Opciones</option>
             </select>
         </div>
-        <div class="con-estado-act">
+        <div class="con-estado-act contenido-dash">
             <div class="estado">
                 <div class="header-estado">
                     <div class="color-estado" style="background: #FFDC4A;">
@@ -116,7 +176,7 @@
             </div>
         </div>
         <!-- confirmar ruta -->
-        <div class="con-ac-ruta" id="confi-ruta">
+        <div class="con-ac-ruta contenido-dash" id="confi-ruta">
             <div class="context-act">
                 ¿Activar ruta ya?
             </div>
@@ -127,7 +187,7 @@
         </div>
         <!-- confirmar ruta -->
         <!-- Info inicio de dia -->
-        <div class="con-info-inicio" id="con-info-inicio">
+        <div class="con-info-inicio contenido-dash" id="con-info-inicio">
             <div class="con-in-dia">
                 <img src="./assets/img/Group 10.svg" alt="parlante-audio-etb" class="img-audio" id="img-info-dia" onclick="alertAudio('au-info-dia', 'img-info-dia')">
                 <br>
@@ -155,7 +215,7 @@
             </div>
         </div>
         <!-- Info inicio de dia -->
-        <div class="con-detalle-inicio" id="con-detalle-inicio">
+        <div class="con-detalle-inicio contenido-dash" id="con-detalle-inicio">
             <div class="con-detalle">
                 <div class="header-detalle">
                     <h4>Detalle Actividad</h4>
@@ -252,7 +312,7 @@
         </div>
     </div>
     <!-- Info orden -->
-    <div class="con-info-inicio" id="con-info-orden">
+    <div class="con-info-inicio contenido-dash" id="con-info-orden">
         <div class="con-in-dia">
             <img src="./assets/img/Group 15.svg" alt="parlante-audio-etb" class="img-audio" id="img-detalle-act" onclick="alertAudio('au-detalle-act', 'img-detalle-act')">
             <br>
@@ -277,25 +337,7 @@
                 <p>1 Hora 30 min</p>
             </div>
             <button id="btn-ac-aprovi">PLANTA EXTERNA</button>
-        </div>
-        <div class="con-in-dia">
-            <br>
-            <div class="items">
-                <h5>Nombre:</h5>
-                <p>MARIA MARTINEZ</p>
-            </div>
-            <div class="items">
-                <h5>Tipo identificación Cliente:</h5>
-                <p>CC</p>
-            </div>
-            <div class="items">
-                <h5>Identificación Cliente:</h5>
-                <p>1022414994</p>
-            </div>
-            <div class="items">
-                <h5>Dirección:</h5>
-                <p>AK 9 113 52 LC 102</p>
-            </div>
+            <button id="ini_externa" style="display: none;"></button>
         </div>
     </div>
     <!-- Info orden -->
@@ -337,7 +379,7 @@
         <!-- Audio orden a realizar -->
         <!-- Audio detalle orden -->
         <audio id="au-detalle-act" controls class="audio" style="display: none;">
-            <source type="audio/wav" src="./assets/audio/ruta/DetalleActividad.m4a">
+            <source type="audio/wav" src="./assets/audio/ruta/DetalleOrden.m4a">
         </audio>
         <!-- Audio detalle orden -->
     <!-- Audios -->
@@ -358,6 +400,12 @@
             </div>
         </div>
         </div>
+        <input type="text" id="agregar-espacio" style="display: none;">
+        <input type="text" id="agregar-diapo" style="display: none;">
+        <input type="text" id="btn-guardar-boleta" style="display: none;">
+        <input type="text" id="btn-paso-8" style="display: none;">
+        <input type="text" id="btn-modal-ps4error" style="display: none;">
+        
         <!-- modal loading -->
     <!-- Modal -->
     <script src="./bootstrap/jquery.js"></script>

@@ -280,5 +280,8 @@ body{
     #alert-footer{
         grid-column: 1/4;
         text-align: center;
-    }
+    }   
 }
+    .container-header-act .contenido-dash{
+        grid-column: 2/3;
+    }

@@ -15,18 +15,18 @@ btn_paso_2.addEventListener('click', () =>{
         $('#pasoli-1').addClass('done')
         $('#pasoli-1').removeClass('active')
         $('#pasoli-2').addClass('active')
+        document.getElementById('suspender').style.display = "block"
     }else{
         $( document ).ready(function() {
             $('#modal-verif').modal('toggle')
         });
-        document.getElementById('cerrar-verif').addEventListener('click', ()=>{
-            $( document ).ready(function() {
-                $('#modal-verif').modal('hide')
-            });
-        })
     }
 })
-
+document.getElementById('cerrar-verif').addEventListener('click', ()=>{
+    $( document ).ready(function() {
+        $('#modal-verif').modal('hide')
+    });
+})
 
 
 let btn_paso_v_1 = document.getElementById('btn-paso-v-1');
@@ -119,7 +119,30 @@ btn_paso_3.addEventListener('click', (event) =>{
         td.appendChild(document.createTextNode(element.cantidad))
         tr.appendChild(td);
         document.getElementById('recep-materials').appendChild(tr);
+        console.log(materiales[element.idMaterial][2]);
+        console.log(element.cantidad);
+        if(materiales[element.idMaterial][2] < element.cantidad){
+            disponibilidad = false;
+            error.push(element);
+        }
     })
+    if(!disponibilidad){
+        let msg = 'No existe materiales suficientes para cubrir la solicitud, en los siguientes materiales:';
+        let conMsg = document.getElementById('mensaje-dispo');
+        $(conMsg).empty();
+        conMsg.appendChild(document.createTextNode(msg));
+        conMsg.appendChild(document.createElement("br"));
+        error.forEach(element=>{
+            let msg = `${materiales[element.idMaterial][4]}, Cantidad Disponible: ${materiales[element.idMaterial][2]}, Cantidad Solicitada: ${element.cantidad}`
+            conMsg.appendChild(document.createTextNode(msg));
+            conMsg.appendChild(document.createElement("br"));
+        })
+
+        $( document ).ready(function() {
+            $('#modal-dispo').modal('toggle')
+        });
+    }
+
     bd.forEach(element=>{
         let tr = document.createElement('tr');
         let td = document.createElement('td');
@@ -211,6 +234,7 @@ btn_paso_4.addEventListener('click', ()=>{
     $('#pasoli-3').addClass('done')
     $('#pasoli-3').removeClass('active')
     $('#pasoli-4').addClass('active')
+    document.getElementById('suspender').style.display = "none"
 })
 
 let btn_paso_5 = document.getElementById('btn-paso5');
@@ -292,3 +316,26 @@ function checkboxBodega(){
 
         }
     }
+    document.getElementById('suspender').addEventListener('click', ()=>{
+        $( document ).ready(function() {
+            $('#modal-suspender').modal('toggle')
+        });
+    })
+    document.getElementById('btn-suspender').addEventListener('click', ()=>{
+        if(document.getElementById('motiv-sus').value.length >= 1){
+            $( document ).ready(function() {
+                $('#modal-loading').modal('toggle')
+            });
+            setTimeout(() => {
+                $( document ).ready(function() {
+                    $('#modal-loading').modal('hide')
+                    window.location.href = "./dashboard.html";
+                });
+              }, "3000");
+        }else{
+            $( document ).ready(function() {
+                $('#modal-verif').modal('toggle')
+            });
+        }
+
+    })

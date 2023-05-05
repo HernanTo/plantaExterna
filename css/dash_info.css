@@ -1,0 +1,29 @@
+#ir_plan_exter{
+    width: 100%;
+    font-size: 16px;
+}
+.cod{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 400px);
+    row-gap: 40px;
+    column-gap: 20px;
+    justify-content: center;
+}
+.cod .filas{
+    margin-top: 20px;
+    width: 400px;
+    padding: 8px;
+    text-align: left;
+}
+.filas h6{
+    color: rgb(138, 138, 138);
+    font-size: 14px;
+}
+.filas input{
+    display: block;
+    margin: 20px 0;
+}
+.filas .form-floating select{
+    margin: 10px 0;
+    
+}

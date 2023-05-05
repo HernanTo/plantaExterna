@@ -521,3 +521,13 @@ document.getElementById('btn-modal-ps4error').addEventListener('click', event=>{
 //         $('#modal-flujo').modal('hide')
 //     });
 // })
+let estadoSidebar = false;
+document.getElementById('btn-menu').addEventListener('click', event =>{
+    if(estadoSidebar){
+        $('#con-main').removeClass('container-header-act');
+        estadoSidebar = false;
+    }else{
+        $('#con-main').addClass('container-header-act');
+        estadoSidebar = true;
+    }
+})

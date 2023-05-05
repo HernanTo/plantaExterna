@@ -1,7 +1,20 @@
 
 let contadorRegistros = 0;
 let bd = []
-let materiales = [['001-00019 BLOQUE DE 200 PARES DE ALTA DENCIDAD', 'UND'], ['001-00020 CUBIERTA TERMOC. 600 - 900', 'UND'], ['003-00002 CONECTOR UNITARIO TIPO RELLENO','UND'], ['003-00003 REGLETA MODULAR RELLENA 25 PARES', 'UND'], ['006-00003 - ALAMBRE DE BAJADA NEOPREN - TRENZADO','MTR'] ,['008-00001 ENCAPSULANTE REENTRABLE', 'JGO'], ['009-00017 TENSOR PLASTICO ALAMBRE DE BAJADA', 'UND'], ['009-0036 MINIBLOQUE TERMINAL DE 100 PARES HORIZON', 'UND'], ['009-00252 DUCTO CONDUIT PVC TIPOL LIVIANO DE 1" 3 M', 'UND'], ['009-00324 POSTE TELEF EN FIBRA DE VIDRIO 9M', 'UND'], ['031-00078 M CABLE RELLENO 150x2x0.4', 'MTR'], ['031-00088 M CABLE RELLENO 1800x2x0.4', 'MTR']];
+let error = [];
+let disponibilidad = true;
+let materiales = [['001-00019 BLOQUE DE 200 PARES DE ALTA DENCIDAD', 'UND', 10, 0, '001-00019'],
+ ['001-00020 CUBIERTA TERMOC. 600 - 900', 'UND', 100, 1, '001-00020'],
+  ['003-00002 CONECTOR UNITARIO TIPO RELLENO','UND', 24, 2, '003-00002'],
+   ['003-00003 REGLETA MODULAR RELLENA 25 PARES', 'UND',13, 3, '003-00003'],
+    ['006-00003 - ALAMBRE DE BAJADA NEOPREN - TRENZADO','MTR', 800, 4, '006-00003'] ,
+    ['008-00001 ENCAPSULANTE REENTRABLE', 'JGO', 150,5, '008-00001'],
+     ['009-00017 TENSOR PLASTICO ALAMBRE DE BAJADA', 'UND', 15,6, '009-00017'],
+      ['009-0036 MINIBLOQUE TERMINAL DE 100 PARES HORIZON', 'UND', 20,7, '009-0036'],
+       ['009-00252 DUCTO CONDUIT PVC TIPOL LIVIANO DE 1" 3 M', 'UND', 800,8, '009-00252'],
+        ['009-00324 POSTE TELEF EN FIBRA DE VIDRIO 9M', 'UND', 100,9, '009-00324'],
+         ['031-00078 M CABLE RELLENO 150x2x0.4', 'MTR', 2500,10, '031-00078'],
+          ['031-00088 M CABLE RELLENO 1800x2x0.4', 'MTR', 400,11, '031-00088']];
 let tempMedida = '';
 let story = [];
 
@@ -63,12 +76,14 @@ document.getElementById('agregar-espacio-pla-ex').addEventListener('click', even
 })
 // alert('a');
 function addselect(array, select){
+    let iterable = 0;
     array.forEach(element => {
         let option = document.createElement('option')
-        option.value = element[0];
+        option.value = iterable;
         option.text = element[0];
         select.appendChild(option);
         $(select).attr('class', 'materiales-select');
+        iterable = iterable + 1;
     });
 }
 document.getElementById('btn-modal').addEventListener('click', event=>{
@@ -76,7 +91,8 @@ document.getElementById('btn-modal').addEventListener('click', event=>{
     let i = 0;
     bd.forEach(element=>{
         let cantidad = document.getElementById(`cantidad-${element.id}`).value;
-        bd[i].material = document.getElementById(`material-${element.id}`).value;
+        bd[i].idMaterial = document.getElementById(`material-${element.id}`).value;
+        bd[i].material = materiales[document.getElementById(`material-${element.id}`).value][0];
         queryMedida(document.getElementById(`material-${element.id}`).value)
         bd[i].cantidad = cantidad;
         bd[i].medida = tempMedida;
@@ -100,9 +116,11 @@ document.getElementById('btn-modal').addEventListener('click', event=>{
     });
 })
 function queryMedida(material){
+    console.log(material);
     materiales.forEach(element=>{
-        if(element[0] == material){
-            // console.log(element[1]);
+        console.log(element[0]);
+        if(element[3] == material){
+            console.log(element[1]);
             tempMedida = element[1];
         }
     })

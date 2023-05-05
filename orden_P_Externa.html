@@ -11,32 +11,97 @@
     <link rel="shortcut icon" href="./assets/img/ETB.svg">
 </head>
 <body>
-    <div class="container-portal">
-        <div class="info">
-            <div class="con-ico"><img src="./assets/img/interrogatorio.svg" alt=""></div>
-            <div class="con-text-info">Dando click en este icono, puede saber más información.</div>
+    <script>
+        var today = new Date();
+        var day = today.getDate();
+        var month = today.getMonth() + 1;
+        var year = today.getFullYear();
+    </script>
+    <div class="container-genre container-dashb" id="con-main">
+        <div class="con-info-audios">
+            <div class="con-img-au">
+                <img src="./assets/img/Group 5.svg" alt="parlante-audio-etb" class="img-audio" id="no-audio-f">
+            </div>
+            <div class="info-audios">
+                <p>Nota: Hacer touch sobre estos iconos para más información</p>
+            </div>
         </div>
-       <div class="header">
-            <div class="menu">
-                <img src="./assets/img/menu-hamburguesa.svg" alt="">
+        <div class="sidebar-m">
+            <div class="head-sidebar">
+  
+              <a class="item-side" href="#">
+                <img src="./assets/img/avatar.svg" alt="">
+                <p>Escuela Digital</p>
+              </a>
+              
             </div>
-            <div class="con-info-u">
-                <div class="info-u">
-                    <img src="./assets/img/user.png" alt="">
-                    <p>Usuario</p>
-                </div>
+            <div class="body-side">
+  
+              <a href="#" class="item-side">
+                <img src="./assets/img/clipboard-list.svg" alt="">
+                <p>Mi ruta</p>
+              </a>
+  
+              <a href="#" class="item-side">
+                <img src="./assets/img/chart-gantt.svg" alt="">
+                <p>Gestionar</p>
+              </a>
+  
+              <a href="#" class="item-side">
+                <img src="./assets/img/map.svg" alt="">
+                <p>Mapas</p>
+              </a>
+  
+              <a href="#" class="item-side">
+                <img src="./assets/img/calendar-days.svg" alt="">
+                <p>Calendario</p>
+              </a>
+  
+              <a href="#" class="item-side">
+                <img src="./assets/img/recursos.svg" alt="">
+                <p>Recursos</p>
+              </a>
+  
+              <a href="#" class="item-side">
+                <img src="./assets/img/settings.svg" alt="">
+                <p>Configuración</p>
+              </a>
+  
+              <a href="#" class="item-side">
+                <img src="./assets/img/user-gear.svg" alt="">
+                <p>Preferencias</p>
+              </a>
+  
+              <a href="#" class="item-side">
+                <img src="./assets/img/cloud-snow.svg" alt="">
+                <p>Acerca de</p>
+              </a>
+  
             </div>
-            <div class="menu-drown" id="menu-drown">
-                <a href="#">Cambiar contraseña</a>
-                <a href="./login.html">Salir</a>
+            <div class="foo-side">
+              
+              <a href="./login.html" class="item-side">
+                <img src="./assets/img/exit.svg" alt="">
+                <p>Cerrar sesión</p>
+              </a>
             </div>
-       </div>
+          </div>
+        <div class="header">
+            <img src="./assets/img/menu.svg" alt="" class="menu-ham" id="btn-menu">
+            <div class="volver-header"><img src="./assets/img/angle-left.svg" alt="volver-left"></div>
+            <div class="text-header">ETBQA_Tecnico1
+                <span><script>document.write(`${month}/${day}/${year}`)</script></span>
+            </div>
+            <div class="text-header-ac">Activar ruta de trabajo</div>
+            <img src="./assets/img/search.svg" alt="search">
+            <img src="./assets/img/comment-alt.svg" alt="msg">
+        </div>
        <div class="body-portal body-info-eta">
         <div class="breadcump">
             <a href="./dashboard.html" class="item-bread">
                 Home</a>
             <a href="./dashboard.html" class="item-bread">Ordenes Agendadas</a>
-            <a href="./orden.html" class="item-bread">Detalle Orden</a>
+            <a href="./orden_P_Externa.html" class="item-bread">Detalle Orden</a>
         </div>
         <div class="body-dash">
             <div class="header-dash">
@@ -192,7 +257,13 @@
 <br><br>
        </div>
     </div>
+    <input type="text" id="agregar-espacio" style="display: none;">
+    <input type="text" id="agregar-diapo" style="display: none;">
+    <input type="text" id="btn-guardar-boleta" style="display: none;">
+    <input type="text" id="btn-paso-8" style="display: none;">
+    <input type="text" id="btn-modal-ps4error" style="display: none;">
+    <script src="./bootstrap/jquery.js"></script>
+    <script src="./bootstrap/bootstrap.bundle.min.js"></script>
     <script src="./js/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
