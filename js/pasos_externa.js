@@ -2,7 +2,7 @@ const paso_1 = document.getElementById('paso-1');
 const paso_2 = document.getElementById('paso-2');
 const modal_confirm2 = document.getElementById('modal-confirm-2');
 // window.onload = () => {
-//     paso_2.style.display = 'block'
+//     paso_5.style.display = 'block'
 // };
 // ==========================================================================================================
 let observ1 = document.getElementById('observ1');
@@ -59,6 +59,11 @@ btn_paso_v_2.addEventListener('click', () =>{
             $('#pasoli-3').removeClass('active')
             $('#pasoli-2').removeClass('done')
             $('#pasoli-2').addClass('active')
+            let mate = document.getElementById('confirmar-material')
+            console.log('a')
+            $(mate).empty()
+            $('#recep-materials').empty()
+
         });
 
     }, "4000");
@@ -76,6 +81,7 @@ btn_paso_v_3.addEventListener('click', () =>{
             $('#pasoli-3').addClass('active')
             $('#pasoli-3').removeClass('done')
             $('#pasoli-4').removeClass('active')
+            
         });
 
     }, "4000");
@@ -339,3 +345,350 @@ function checkboxBodega(){
         }
 
     })
+
+    let resolucion_1 = document.getElementById('resolucion-1')
+    resolucion_1.addEventListener('change', ()=>{
+      if(resolucion_1.value == 'ap_tel'){
+        $(resolucion_2).empty()
+
+        option = document.createElement('option');
+        option.text = 'Seleccione una opción'
+        resolucion_2.appendChild(option);
+
+        option = document.createElement('option');
+        option.value = 'falla_cru';
+        option.text = 'FALLA CRUZADA'
+        resolucion_2.appendChild(option);
+
+        option = document.createElement('option');
+        option.value = 'daño_rev';
+        option.text = 'SIN DAÑO AL REVISAR'
+        resolucion_2.appendChild(option);
+        
+
+      }else if(resolucion_1.value == 'arma_tel'){
+        $(resolucion_2).empty()
+
+        option = document.createElement('option');
+        option.text = 'Seleccione una opción'
+        resolucion_2.appendChild(option);
+
+
+        option = document.createElement('option');
+        option.value = 'arma_reno';
+        option.text = 'ARMARIO-RENOVACION'
+        resolucion_2.appendChild(option);
+
+        option = document.createElement('option');
+        option.value = 'base';
+        option.text = 'BASE'
+        resolucion_2.appendChild(option);
+
+        option = document.createElement('option');
+        option.value = 'cabina';
+        option.text = 'CABINA'
+        resolucion_2.appendChild(option);
+
+        option = document.createElement('option');
+        option.value = 'falla_bloque';
+        option.text = 'FALLA BLOQUE PRIMAR / SECUNDAR'
+        resolucion_2.appendChild(option);
+
+        option = document.createElement('option');
+        option.value = 'falla_cru';
+        option.text = 'FALLA CRUZADA'
+        resolucion_2.appendChild(option);
+      }else if(resolucion_1.value == 'cableA_12'){
+        $(resolucion_2).empty()
+
+        option = document.createElement('option');
+        option.text = 'Seleccione una opción'
+        resolucion_2.appendChild(option);
+
+        option = document.createElement('option');
+        option.value = 'daño_ter';
+        option.text = 'DAÑO POR TERCEROS'
+        resolucion_2.appendChild(option);
+
+        option = document.createElement('option');
+        option.value = 'deterioro';
+        option.text = 'DETERIORO / DESGASTE'
+        resolucion_2.appendChild(option);
+
+        option = document.createElement('option');
+        option.value = 'roedores';
+        option.text = 'ROEDORES'
+        resolucion_2.appendChild(option);
+
+        option = document.createElement('option');
+        option.value = 'vandalismo';
+        option.text = 'VANDALISMO'
+        resolucion_2.appendChild(option);
+
+      }else if(resolucion_1.value == 'cableA_24'){
+        $(resolucion_2).empty()
+
+        option = document.createElement('option');
+        option.text = 'Seleccione una opción'
+        resolucion_2.appendChild(option);
+
+        option = document.createElement('option');
+        option.value = 'daño_ter';
+        option.text = 'DAÑO POR TERCEROS'
+        resolucion_2.appendChild(option);
+
+        option = document.createElement('option');
+        option.value = 'deterioro';
+        option.text = 'DETERIORO / DESGASTE'
+        resolucion_2.appendChild(option);
+
+        option = document.createElement('option');
+        option.value = 'roedores';
+        option.text = 'ROEDORES'
+        resolucion_2.appendChild(option);
+
+        option = document.createElement('option');
+        option.value = 'vandalismo';
+        option.text = 'VANDALISMO'
+        resolucion_2.appendChild(option);
+      }else if(resolucion_1.value == 'cableD_24'){
+        $(resolucion_2).empty()
+
+        option = document.createElement('option');
+        option.text = 'Seleccione una opción'
+        resolucion_2.appendChild(option);
+
+        option = document.createElement('option');
+        option.value = 'daño_ter';
+        option.text = 'DAÑO POR TERCEROS'
+        resolucion_2.appendChild(option);
+
+        option = document.createElement('option');
+        option.value = 'deterioro';
+        option.text = 'DETERIORO / DESGASTE'
+        resolucion_2.appendChild(option);
+
+        option = document.createElement('option');
+        option.value = 'roedores';
+        option.text = 'ROEDORES'
+        resolucion_2.appendChild(option);
+
+        option = document.createElement('option');
+        option.value = 'vandalismo';
+        option.text = 'VANDALISMO'
+        resolucion_2.appendChild(option);
+      }else if(resolucion_1.value == 'cableD_12'){
+        $(resolucion_2).empty()
+
+        option = document.createElement('option');
+        option.text = 'Seleccione una opción'
+        resolucion_2.appendChild(option);
+
+        option = document.createElement('option');
+        option.value = 'daño_ter';
+        option.text = 'DAÑO POR TERCEROS'
+        resolucion_2.appendChild(option);
+
+        option = document.createElement('option');
+        option.value = 'deterioro';
+        option.text = 'DETERIORO / DESGASTE'
+        resolucion_2.appendChild(option);
+
+        option = document.createElement('option');
+        option.value = 'roedores';
+        option.text = 'ROEDORES'
+        resolucion_2.appendChild(option);
+
+        option = document.createElement('option');
+        option.value = 'vandalismo';
+        option.text = 'VANDALISMO'
+        resolucion_2.appendChild(option);
+      }else{
+        $(resolucion_2).empty()
+
+        option = document.createElement('option');
+        option.text = 'Seleccione una opción'
+        resolucion_2.appendChild(option);
+
+        $(resolucion_3).empty()
+
+            option = document.createElement('option');
+            option.text = 'Seleccione una opción'
+            resolucion_3.appendChild(option);
+    }
+})
+
+    let resolucion_2 = document.getElementById('resolucion-2');
+    resolucion_2.addEventListener('change', ()=>{
+        if(resolucion_2.value == 'falla_cru'){
+            let resolucion_3 = document.getElementById('resolucion-3');
+            $(resolucion_3).empty()
+
+            option = document.createElement('option');
+            option.text = 'Seleccione una opción'
+            resolucion_3.appendChild(option);
+
+            option = document.createElement('option');
+            option.value = 'ajuste_cru';
+            option.text = 'AJUSTE CRUZADA'
+            resolucion_3.appendChild(option);
+
+            option = document.createElement('option');
+            option.value = 'arre_cru';
+            option.text = 'ARREGLO CRUZADA'
+            resolucion_3.appendChild(option);
+
+            option = document.createElement('option');
+            option.value = 'cam_cru';
+            option.text = 'CAMBIO CRUZADA'
+            resolucion_3.appendChild(option);
+        }else if(resolucion_2.value == 'daño_rev'){
+            $(resolucion_3).empty()
+
+            option = document.createElement('option');
+            option.text = 'Seleccione una opción'
+            resolucion_3.appendChild(option);
+
+            option = document.createElement('option');
+            option.value = 'dan_cli';
+            option.text = 'DAÑO EQUIPO CLIENTE'
+            resolucion_3.appendChild(option);
+
+        }else if(resolucion_2.value == 'arma_reno'){
+            $(resolucion_3).empty()
+
+            option = document.createElement('option');
+            option.text = 'Seleccione una opción'
+            resolucion_3.appendChild(option);
+
+            option = document.createElement('option');
+            option.value = 'cumplido';
+            option.text = 'CUMPLIDO'
+            resolucion_3.appendChild(option);
+        }else if(resolucion_2.value == 'base'){
+            $(resolucion_3).empty()
+
+            option = document.createElement('option');
+            option.text = 'Seleccione una opción'
+            resolucion_3.appendChild(option);
+
+            option = document.createElement('option');
+            option.value = 'cumplido';
+            option.text = 'CUMPLIDO'
+            resolucion_3.appendChild(option);
+        }else if(resolucion_2.value == 'cabina'){
+            $(resolucion_3).empty()
+
+            option = document.createElement('option');
+            option.text = 'Seleccione una opción'
+            resolucion_3.appendChild(option);
+
+            option = document.createElement('option');
+            option.value = 'cumplido';
+            option.text = 'CUMPLIDO'
+            resolucion_3.appendChild(option);
+
+            option = document.createElement('option');
+            option.value = 'inviable';
+            option.text = 'INVIABLE'
+            resolucion_3.appendChild(option);
+
+            option = document.createElement('option');
+            option.value = 'negado';
+            option.text = 'NEGADO'
+            resolucion_3.appendChild(option);
+        }else if(resolucion_2.value == 'falla_bloque'){
+            $(resolucion_3).empty()
+
+            option = document.createElement('option');
+            option.text = 'Seleccione una opción'
+            resolucion_3.appendChild(option);
+
+            option = document.createElement('option');
+            option.value = 'cambio_blo';
+            option.text = 'CAMBIO BLOQUE - REGLETA'
+            resolucion_3.appendChild(option);
+
+            option = document.createElement('option');
+            option.value = 'cambio_cru';
+            option.text = 'CAMBIO CRUZADA'
+            resolucion_3.appendChild(option);
+
+            option = document.createElement('option');
+            option.value = 'cambio_par';
+            option.text = 'CAMBIO PAR'
+            resolucion_3.appendChild(option);
+        }else if(resolucion_2.value == 'daño_ter'){
+            $(resolucion_3).empty()
+
+            option = document.createElement('option');
+            option.text = 'Seleccione una opción'
+            resolucion_3.appendChild(option);
+
+            option = document.createElement('option');
+            option.value = 'cam_element';
+            option.text = 'CAMBIO ELEMENTO'
+            resolucion_3.appendChild(option);
+
+            option = document.createElement('option');
+            option.value = 'rest_serv';
+            option.text = 'RESTABLECER SERVICIO POR FUSION'
+            resolucion_3.appendChild(option);
+
+            option = document.createElement('option');
+            option.value = 'repa_med';
+            option.text = 'REPARACION DE MEDIO'
+            resolucion_3.appendChild(option);
+        }else if(resolucion_2.value == 'deterioro'){
+            $(resolucion_3).empty()
+
+            option = document.createElement('option');
+            option.text = 'Seleccione una opción'
+            resolucion_3.appendChild(option);
+
+            option = document.createElement('option');
+            option.value = 'cam_element';
+            option.text = 'CAMBIO ELEMENTO'
+            resolucion_3.appendChild(option);
+        }else if(resolucion_2.value == 'roedores'){
+            $(resolucion_3).empty()
+
+            option = document.createElement('option');
+            option.text = 'Seleccione una opción'
+            resolucion_3.appendChild(option);
+
+            option = document.createElement('option');
+            option.value = 'cam_element';
+            option.text = 'CAMBIO ELEMENTO'
+            resolucion_3.appendChild(option);
+        }else if(resolucion_2.value == 'vandalismo'){
+            $(resolucion_3).empty()
+
+            option = document.createElement('option');
+            option.text = 'Seleccione una opción'
+            resolucion_3.appendChild(option);
+
+            option = document.createElement('option');
+            option.value = 'cam_element';
+            option.text = 'CAMBIO ELEMENTO'
+            resolucion_3.appendChild(option);
+
+            option = document.createElement('option');
+            option.value = 'rest_serv';
+            option.text = 'RESTABLECER SERVICIO POR FUSION'
+            resolucion_3.appendChild(option);
+
+            option = document.createElement('option');
+            option.value = 'repa_med';
+            option.text = 'REPARACION DE MEDIO'
+            resolucion_3.appendChild(option);
+        }else{
+            $(resolucion_3).empty()
+
+            option = document.createElement('option');
+            option.text = 'Seleccione una opción'
+            resolucion_3.appendChild(option);
+        }
+    })
+
+    let resolucion_3 = document.getElementById('resolucion-3');

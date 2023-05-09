@@ -220,7 +220,7 @@
                 </div> 
                 
                 <!-- Paso 4 -->
-                <div class="paso" id="paso-4">
+                <div class="paso" id="paso-4" style="display: none;">
                   <div class="materiales">
                     <h2>Material Reutilizado y No Reutilizado</h2>
                     <div class="linea"></div>
@@ -238,7 +238,8 @@
                             <tbody id="reuti-materials">
                             </tbody>
                         </table>     
-                        <button  id="agregar-espacio-material-reu" class="agregar-gene"><i class="fa-solid fa-circle-plus" style="color: #ffffff;"></i></button>         
+                        <button  id="agregar-espacio-material-reu" class="agregar-gene"><i class="fa-solid fa-circle-plus" style="color: #ffffff;"></i></button>
+
                       </div>
                       <div class="bodega">
                         <label for="">Materiales no reutilizables</label>
@@ -282,16 +283,14 @@
                         <div class="cod">
                           <label for="">Codigo Resolución N° 1</label>
                           <span>
-                            <select name="" id="">
+                            <select name="" id="resolucion-1">
                               <option value="">Seleccione una opción</option>
-                              <option value="">APARTADO TELEFONICO</option>
-                              <option value="">ARMARIO TELEFONICO</option>
-                              <option value="">CABLE ADSS 12 HILOS</option>
-                              <option value="">CABLE ADSS 24 HILOS</option>
-                              <option value="">CABLE ADSS 48 HILOS</option>
-                              <option value="">CABLE DDR 144 HILOS</option>
-                              <option value="">CABLE DDR 24 HILOS</option>
-                              <option value="">CABLE DDR 12 HILOS</option>
+                              <option value="ap_tel">APARTADO TELEFONICO</option>
+                              <option value="arma_tel">ARMARIO TELEFONICO</option>
+                              <option value="cableA_12">CABLE ADSS 12 HILOS</option>
+                              <option value="cableA_24">CABLE ADSS 24 HILOS</option>
+                              <option value="cableD_24">CABLE DDR 24 HILOS</option>
+                              <option value="cableD_12">CABLE DDR 12 HILOS</option>
                             </select>
                           </span>
                         </div>
@@ -299,17 +298,8 @@
                         <div class="cod">
                           <label for="">Codigo Resolución N° 2</label>
                           <span>
-                            <select name="" id="">
+                            <select name="" id="resolucion-2">
                               <option value="">Seleccione una opción</option>
-                              <option value="">FALLA CRUZADA</option>
-                              <option value="">SIN DAÑO AL REVISAR</option>
-                              <option value="">ARMARIO - RENOVACIÓN</option>
-                              <option value="">BASE</option>
-                              <option value="">CABINA</option>
-                              <option value="">FALLA BLOQUE PRIMAR / SECUNDAR</option>
-                              <option value="">FALLA GENERAL</option>
-                              <option value="">FALLA VANDALISMO</option>
-                              <option value="">RUIDO EQUIPO</option>
                             </select>
                           </span>
                         </div>
@@ -317,17 +307,8 @@
                         <div class="cod">
                           <label for="">Codigo Resolución N° 3</label>
                           <span>
-                            <select name="" id="">
+                            <select name="" id="resolucion-3">
                               <option value="">Seleccione una opción</option>
-                              <option value="">AJUSTE CRUZADA</option>
-                              <option value="">ARREGLO CRUZADA</option>
-                              <option value="">CAMBIO CRUZADA</option>
-                              <option value="">DAÑO EQUIPO CLIENTE</option>
-                              <option value="">CUMPLIDO</option>
-                              <option value="">INVIABLE</option>
-                              <option value="">NEGADO</option>
-                              <option value="">CAMBIO BLOQUE - REGLETA</option>
-                              <option value="">CAMBIO PAR</option>
                             </select>
                           </span>
                         </div>

@@ -1,4 +1,3 @@
-
 let contadorRegistros = 0;
 let bd = []
 let error = [];
