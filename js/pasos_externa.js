@@ -143,27 +143,27 @@ btn_paso_3.addEventListener('click', (event) =>{
         });
     }
 
-    bd.forEach(element=>{
-        let tr = document.createElement('tr');
-        let td = document.createElement('td');
-        let input = (document.createElement('input'));
-        input.type = 'checkbox';
-        input.className = 'checkbox';
-        $(input).attr('id', `checkbox-${element.id}`)
-        td.appendChild(document.createTextNode(element.material))
-        tr.appendChild(td);
-        td = document.createElement('td');
-        // console.log(element.cantidad)
-        td.appendChild(document.createTextNode(element.cantidad))
-        tr.appendChild(td);
-        td = document.createElement('td');
-        td.appendChild(document.createTextNode(element.medida))
-        tr.appendChild(td);
-        td = document.createElement('td');
-        td.appendChild(input)
-        tr.appendChild(td);
-        document.getElementById('reuti-materials').appendChild(tr);
-    })
+    // bd.forEach(element=>{
+    //     let tr = document.createElement('tr');
+    //     let td = document.createElement('td');
+    //     let input = (document.createElement('input'));
+    //     input.type = 'checkbox';
+    //     input.className = 'checkbox';
+    //     $(input).attr('id', `checkbox-${element.id}`)
+    //     td.appendChild(document.createTextNode(element.material))
+    //     tr.appendChild(td);
+    //     td = document.createElement('td');
+    //     // console.log(element.cantidad)
+    //     td.appendChild(document.createTextNode(element.cantidad))
+    //     tr.appendChild(td);
+    //     td = document.createElement('td');
+    //     td.appendChild(document.createTextNode(element.medida))
+    //     tr.appendChild(td);
+    //     td = document.createElement('td');
+    //     td.appendChild(input)
+    //     tr.appendChild(td);
+    //     document.getElementById('reuti-materials').appendChild(tr);
+    // })
 
     bd.forEach(element=>{
 

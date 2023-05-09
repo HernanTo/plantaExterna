@@ -18,6 +18,38 @@ let materiales = [['001-00019 BLOQUE DE 200 PARES DE ALTA DENCIDAD', 'UND', 10, 
 let tempMedida = '';
 let story = [];
 
+document.getElementById('agregar-espacio-material-reu').addEventListener('click', event=>{
+    alert('a')
+    let tr = document.createElement('tr');
+    let td = document.createElement('td');
+    let select = document.createElement('select');
+    // $(select).attr("id", `material-${contadorRegistros + 1}`);
+    addselect(materiales, select);
+    td.appendChild(select)
+    tr.appendChild(td);
+    
+    let input = document.createElement('input');
+    td = document.createElement('td');
+    input.type = `number`;
+    // $(input).attr("id",`cantidad-${contadorRegistros + 1}`);
+    td.appendChild(input)
+    tr.appendChild(td);
+    td = document.createElement('td');
+    td.appendChild(document.createTextNode('UND'));
+    // $(td).attr('id', `medidareuti-${contadorRegistros + 1}`)
+    tr.appendChild(td);
+    td = document.createElement('td');
+    checkbox = document.createElement('input');
+    checkbox.type = "checkbox"
+    // let i = document.createElement('i');
+    // i.className = "fa-solid fa-xmark";
+    // $(i).attr("id",`borrar-${contadorRegistros + 1}`);
+    td.appendChild(checkbox);
+    tr.appendChild(td);
+    // $(tr).attr("id",`row-${contadorRegistros + 1}`);
+    document.getElementById('reuti-materials').appendChild(tr);
+})
+
 document.getElementById('agregar-espacio-pla-ex').addEventListener('click', event=>{
     let tr = document.createElement('tr');
     let td = document.createElement('td');
