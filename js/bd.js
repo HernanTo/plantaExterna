@@ -19,7 +19,7 @@ let tempMedida = '';
 let story = [];
 
 document.getElementById('agregar-espacio-material-reu').addEventListener('click', event=>{
-    alert('a')
+    // alert('a')
     let tr = document.createElement('tr');
     let td = document.createElement('td');
     let select = document.createElement('select');
