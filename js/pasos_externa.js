@@ -48,6 +48,7 @@ btn_paso_v_1.addEventListener('click', () =>{
 });
 let btn_paso_v_2 = document.getElementById('btn-paso-v-2');
 btn_paso_v_2.addEventListener('click', () =>{
+    disponibilidad = true;
     $( document ).ready(function() {
         $('#modal-loading').modal('toggle')
     });
@@ -63,6 +64,8 @@ btn_paso_v_2.addEventListener('click', () =>{
             console.log('a')
             $(mate).empty()
             $('#recep-materials').empty()
+            $('#mensaje-dispo').empty();
+            $('#total-materials').empty();
 
         });
 

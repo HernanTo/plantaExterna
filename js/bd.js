@@ -30,6 +30,7 @@ document.getElementById('agregar-espacio-material-reu').addEventListener('click'
     let input = document.createElement('input');
     td = document.createElement('td');
     input.type = `number`;
+    input.value = 1;
     // $(input).attr("id",`cantidad-${contadorRegistros + 1}`);
     td.appendChild(input)
     tr.appendChild(td);
@@ -62,6 +63,7 @@ document.getElementById('agregar-espacio-pla-ex').addEventListener('click', even
     td = document.createElement('td');
     input.type = `number`;
     $(input).attr("id",`cantidad-${contadorRegistros + 1}`);
+    input.value = 1;
     td.appendChild(input)
     tr.appendChild(td);
     td = document.createElement('td');
