@@ -255,3 +255,33 @@ p{
     /* height: 10px; */
 }
 /* Temp */
+
+/*-----------------------------------------*/
+.btn-audio{
+    display: inline;
+}
+.btn-audio1{
+    position: relative;
+    top: -20px;
+    left: 140px;
+}
+.btn-audio2{
+    position: relative;
+    top: -25px;
+    left: 60px;
+}
+.btn-audio3{
+    position: relative;
+    top: -35px;
+    left: 380px;
+}
+.btn-audio4{
+    position: relative;
+    top: -35px;
+    left: 560px;
+}
+.btn-audio5{
+    position: relative;
+    top: -35px;
+    left: 280px;
+}
